@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="text-align: center;">
+    <img src="google.jpg" style="background-repeat: no-repeat;background-size: contain;">
+    <img src="tpme.jpg" style="position: absolute;left: 950px;top: 30px;width: 190px;border-radius: 5px;cursor: pointer;" class="hover-fade" onclick="document.getElementById('popup').style.display = 'block';setTimeout(s => {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('loader-contents').style.display = 'block';
+    }, 1500)">
+    <div id="popup" style="background-color: white;border-radius: 20px;border: 2px solid grey;position: absolute;top: 100px;width: 1000px;height: 800px;left: 50%;margin-left: -500px;display: none">
+        <h2 onclick="document.getElementById('popup').style.display = 'none';" style="cursor: pointer;float: right;margin: 10px 15px;" class="hover-fade">X</h2>
+        <h1>Book your trip with TravelPerksMe</h1>
+        <label for="from">Travelling from</label>
+        <input type="text" id="from" placeholder="Home (detemined from calendar)" size="30" style="margin-right: 30px;">
+        <input type="checkbox" id="parking" name="scales"checked>
+        <label for="parking">Parking required</label>
+        <div id="loader"></div>
+        <div id="loader-contents" style="display: none;">
+            <b style="color: red;float: left;margin: 30px;">This may clash with <a style="text-decoration: underline;cursor: pointer;" class="hover-fade">Client Meeting</a> at 17:30 CET 22/02/2022</b>
+            <img id="route1" src="route1.jpg" style="width: 95%;cursor: pointer;border: 2px solid grey;border-radius: 10px;" onclick="document.getElementById('route1').style.borderColor = 'grey';document.getElementById('route2').style.borderColor = 'white'">
+            <img id="route2" src="route2.jpg" style="width: 95%;cursor: pointer;border: 2px solid white;border-radius: 10px;" onclick="document.getElementById('route1').style.borderColor = 'white';document.getElementById('route2').style.borderColor = 'grey'">
+            <h1 style="background-color: rgb(1, 39, 120);color: white;padding: 10px 10px;border-radius: 10px;width: 100px;cursor: pointer;margin: auto;margin-top: 30px;" class="hover-fade">Book</h1>
+        </div>
+    </div>
+</html>

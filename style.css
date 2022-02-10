@@ -1,0 +1,26 @@
+@import url('https://www.travelperk.com/wp-content/themes/travelperk/static/fonts/Graphik-Regular.woff2');
+* {
+    font-family: 'graphik', sans-serif;
+}
+
+.hover-fade:hover {
+    opacity: 0.95;
+}
+
+#loader {
+    border: 16px solid white; /* Light grey */
+    border-top: 16px solid rgb(1, 39, 120); /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+    left: 50%;
+    margin-left: -60px;
+    position: relative;
+    margin-top: 50px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
